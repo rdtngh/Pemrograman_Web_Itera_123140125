@@ -1,7 +1,6 @@
-# Mini POS - Kasir & Keranjang Belanja
+# Tugas 1 Praktikum PAW
 
 ## Identitas
-
 Nama:
 Raditya Alrasyid Nugroho
 
@@ -95,13 +94,12 @@ LocalStorage digunakan untuk menyimpan data keranjang agar tidak hilang saat pen
 ## Dokumentasi Screenshot
 
 ### 1. Tampilan Form Utama
+<img width="1920" height="1080" alt="Screenshot (1156)" src="https://github.com/user-attachments/assets/329ff8ab-9fe8-470c-ad72-e10d0cad5083" />
 
 ### 2. Tampilan Validasi Error
-[Tambahkan screenshot]
+<img width="1041" height="656" alt="Cuplikan layar 2026-10-02 203712" src="https://github.com/user-attachments/assets/7be63270-fa01-42a5-b6ea-34e5cee480fe" />
 
 ### 3. Tampilan Hasil Transaksi
-[Tambahkan screenshot]
+<img width="1920" height="1080" alt="Screenshot (1157)" src="https://github.com/user-attachments/assets/5e86f11b-dcd9-4973-9817-b928ea699037" />
 
 ---
-
-Dokumentasi ini dibuat sebagai panduan untuk tugas praktikum Mini POS sederhana menggunakan HTML, CSS, JavaScript, dan localStorage.
