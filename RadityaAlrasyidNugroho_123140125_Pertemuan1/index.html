@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mini POS - Kasir & Keranjang Belanja</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header class="page-header">
+        <div>
+          <p class="eyebrow">Sistem Kasir</p>
+          <h1>Mini POS</h1>
+        </div>
+      </header>
+
+      <main class="app-grid">
+        <section class="card form-card">
+          <h2>Form Input Barang</h2>
+          <form id="itemForm" novalidate>
+            <div class="form-group">
+              <label for="itemName">Nama Barang</label>
+              <input type="text" id="itemName" placeholder="Masukkan nama barang" />
+              <small id="itemNameError" class="error-message"></small>
+            </div>
+
+            <div class="form-group">
+              <label for="itemPrice">Harga Satuan</label>
+              <input type="number" id="itemPrice" placeholder="Masukkan harga satuan" min="500" step="100" />
+              <small id="itemPriceError" class="error-message"></small>
+            </div>
+
+            <div class="form-group">
+              <label for="itemQty">Jumlah / Qty</label>
+              <input type="number" id="itemQty" placeholder="Masukkan jumlah" min="1" step="1" />
+              <small id="itemQtyError" class="error-message"></small>
+            </div>
+
+            <button type="submit" class="btn btn-primary">Tambah ke Keranjang</button>
+          </form>
+        </section>
+
+        <section class="card cart-card">
+          <div class="section-header">
+            <h2>Keranjang Belanja</h2>
+          </div>
+
+          <div class="table-wrapper">
+            <table>
+              <thead>
+                <tr>
+                  <th>No</th>
+                  <th>Nama Barang</th>
+                  <th>Harga Satuan</th>
+                  <th>Qty</th>
+                  <th>Subtotal</th>
+                  <th>Aksi</th>
+                </tr>
+              </thead>
+              <tbody id="cartTableBody"></tbody>
+            </table>
+          </div>
+        </section>
+
+        <aside class="card summary-card">
+          <h2>Ringkasan Pembayaran</h2>
+
+          <div class="summary-row">
+            <span>Total Belanja</span>
+            <strong id="totalBelanja">Rp0</strong>
+          </div>
+
+          <div class="summary-row">
+            <span>Diskon</span>
+            <strong id="discountValue">Rp0</strong>
+          </div>
+
+          <div class="summary-row total-row">
+            <span>Total Akhir</span>
+            <strong id="finalTotal">Rp0</strong>
+          </div>
+
+          <div class="promo-group">
+            <label for="promoCode">Kode Promo</label>
+            <div class="promo-input-row">
+              <input type="text" id="promoCode" placeholder="Masukkan kode promo" />
+              <button type="button" id="applyPromoBtn" class="btn btn-secondary">Gunakan Promo</button>
+            </div>
+            <small id="promoMessage" class="promo-message"></small>
+          </div>
+
+          <div class="payment-group">
+            <label for="cashInput">Uang Bayar</label>
+            <input type="number" id="cashInput" placeholder="Masukkan nominal uang" min="0" step="100" />
+          </div>
+
+          <div class="summary-row change-row">
+            <span>Kembalian</span>
+            <strong id="changeValue">Rp0</strong>
+          </div>
+
+          <p id="paymentStatus" class="payment-status"></p>
+
+          <button type="button" id="resetTransactionBtn" class="btn btn-danger">Reset Transaksi</button>
+        </aside>
+      </main>
+    </div>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>
