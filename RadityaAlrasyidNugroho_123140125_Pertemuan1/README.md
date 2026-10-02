@@ -2,14 +2,14 @@
 
 ## Identitas
 
-Nama Lengkap:  
+Nama:
 Raditya Alrasyid Nugroho
 
 NIM:  
 123140125
 
 Kelas Praktikum:  
-[ISI KELAS JIKA DIKETAHUI]
+RB
 
 ## Deskripsi Aplikasi
 
@@ -52,22 +52,22 @@ Penjelasan struktur file:
 
 ## Daftar Fitur
 
-- [ ] Validasi nama barang minimal 3 karakter
-- [ ] Validasi harga minimal Rp500
-- [ ] Validasi qty minimal 1
-- [ ] Feedback error
-- [ ] Tambah barang
-- [ ] Tabel keranjang
-- [ ] Perhitungan subtotal
-- [ ] Perhitungan total belanja
-- [ ] Diskon 10%
-- [ ] Kode promo HEMAT10
-- [ ] Input uang bayar
-- [ ] Perhitungan kembalian
-- [ ] Validasi uang tidak mencukupi
-- [ ] Hapus item
-- [ ] localStorage
-- [ ] Reset transaksi
+- Validasi nama barang minimal 3 karakter
+- Validasi harga minimal Rp500
+- Validasi qty minimal 1
+- Feedback error
+- Tambah barang
+- Tabel keranjang
+- Perhitungan subtotal
+- Perhitungan total belanja
+- Diskon 10%
+- Kode promo HEMAT10
+- Input uang bayar
+- Perhitungan kembalian
+- Validasi uang tidak mencukupi
+- Hapus item
+- localStorage
+- Reset transaksi
 
 ## Penjelasan Alur Program
 
@@ -95,7 +95,6 @@ LocalStorage digunakan untuk menyimpan data keranjang agar tidak hilang saat pen
 ## Dokumentasi Screenshot
 
 ### 1. Tampilan Form Utama
-[Tambahkan screenshot]
 
 ### 2. Tampilan Validasi Error
 [Tambahkan screenshot]
