@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#f4f6f2" />
+    <title>StudyBoard — Ruang belajar harian</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="topbar">
+        <a class="brand" href="#top" aria-label="StudyBoard beranda"><span class="brand-mark">S</span><span>study<span class="brand-light">board</span></span></a>
+        <div class="topbar-right"><span class="campus-pill"><span class="live-dot"></span> ITERA · Lampung</span><div class="avatar" aria-label="Mahasiswa">RN</div></div>
+      </header>
+
+      <main id="top">
+        <section class="welcome-row" aria-labelledby="greeting">
+          <div><p class="eyebrow" id="today-label">RUANG BELAJAR HARI INI</p><h1 id="greeting">Selamat datang kembali<span class="heading-dot">.</span></h1><p class="welcome-copy">Pelan-pelan, satu tugas dalam satu waktu.</p></div>
+          <div class="clock-card"><span class="clock-icon">◷</span><div><strong id="clock">Memuat waktu…</strong><span id="date-label">—</span></div></div>
+        </section>
+
+        <section class="hero-grid" aria-label="Informasi hari ini">
+          <article class="quote-card panel">
+            <div class="quote-top"><span class="mini-label"><span class="sparkle">✳</span> CATATAN HARI INI</span><span class="quote-mark">“</span></div>
+            <blockquote id="quote-text">Sedikit demi sedikit, lama-lama menjadi bukit.</blockquote>
+            <p class="quote-author" id="quote-author">— Semangat belajar</p>
+            <div class="quote-decoration" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span></div>
+          </article>
+          <article class="weather-card panel" id="weather" aria-live="polite">
+            <div class="weather-heading"><span class="mini-label">CUACA KAMPUS</span><span class="weather-location">Bandar Lampung</span></div>
+            <div class="weather-main"><div class="weather-icon" id="weather-icon" aria-hidden="true">☀</div><div><strong id="weather-temp">Memuat…</strong><span id="weather-condition">Mengambil data cuaca</span></div></div>
+            <div class="weather-footer"><span>↗ Angin</span><strong id="weather-wind">—</strong><span class="weather-source">Open-Meteo</span></div>
+          </article>
+        </section>
+
+        <section class="overview" aria-label="Ringkasan tugas">
+          <div class="section-title"><div><p class="eyebrow">PROGRES KULIAH</p><h2>Ringkasan tugas</h2></div><span class="overview-note">Tetap fokus, kamu pasti bisa ✦</span></div>
+          <div class="stats-grid" id="stats">
+            <article class="stat-card"><span class="stat-icon icon-total">▤</span><div><span class="stat-label">Total tugas</span><strong id="stat-total">0</strong><span class="stat-caption">di semua mata kuliah</span></div></article>
+            <article class="stat-card"><span class="stat-icon icon-active">◷</span><div><span class="stat-label">Belum selesai</span><strong id="stat-active">0</strong><span class="stat-caption">masih dalam proses</span></div></article>
+            <article class="stat-card"><span class="stat-icon icon-done">✓</span><div><span class="stat-label">Selesai</span><strong id="stat-done">0</strong><span class="stat-caption">kerja bagus!</span></div></article>
+            <article class="stat-card"><span class="stat-icon icon-due">⚑</span><div><span class="stat-label">Segera tenggat</span><strong id="stat-due">0</strong><span class="stat-caption">dalam 3 hari ke depan</span></div></article>
+          </div>
+        </section>
+
+        <section class="tasks-section" aria-labelledby="tasks-heading">
+          <div class="section-title task-title"><div><p class="eyebrow">JAGA MOMENTUM</p><h2 id="tasks-heading">Daftar tugas</h2></div><span class="task-count" id="task-count">0 tugas</span></div>
+          <div class="workspace-grid">
+            <section class="task-panel panel">
+              <div class="task-toolbar"><div class="filter-tabs" role="group" aria-label="Filter tugas"><button class="filter-btn active" type="button" data-filter="all">Semua</button><button class="filter-btn" type="button" data-filter="active">Aktif</button><button class="filter-btn" type="button" data-filter="done">Selesai</button></div>
+                <label class="search-box"><span aria-hidden="true">⌕</span><input id="search-input" type="search" placeholder="Cari tugas…" aria-label="Cari tugas" /></label>
+              </div>
+              <p class="list-status" id="list-status" aria-live="polite"></p>
+              <ul class="task-list" id="task-list" aria-live="polite"></ul>
+            </section>
+
+            <aside class="form-panel panel" aria-labelledby="form-heading">
+              <div class="form-heading"><span class="form-icon">＋</span><div><p class="eyebrow">RAPIKAN RENCANA</p><h3 id="form-heading">Tugas baru</h3></div></div>
+              <p class="form-intro">Catat hal yang ingin kamu selesaikan.</p>
+              <form id="task-form" novalidate>
+                <input type="hidden" id="task-id" />
+                <label class="field-label" for="task-title">Nama tugas</label><input class="field-input" id="task-title" name="title" type="text" placeholder="Contoh: Laporan praktikum" maxlength="100" required />
+                <small class="field-error" id="title-error" aria-live="polite"></small>
+                <label class="field-label" for="task-course">Mata kuliah</label><input class="field-input" id="task-course" name="course" type="text" placeholder="Contoh: Pemrograman Web" maxlength="60" />
+                <div class="field-row"><div><label class="field-label" for="task-deadline">Tenggat</label><input class="field-input" id="task-deadline" name="deadline" type="date" /></div><div><label class="field-label" for="task-priority">Prioritas</label><select class="field-input" id="task-priority" name="priority"><option value="sedang">Sedang</option><option value="tinggi">Tinggi</option><option value="rendah">Rendah</option></select></div></div>
+                <div class="form-actions"><button class="save-btn" id="save-button" type="submit"><span>＋</span> Simpan tugas</button><button class="cancel-btn" id="cancel-edit" type="button" hidden>Batal</button></div>
+              </form>
+              <div class="form-tip"><span>✦</span> Tugas kecil yang dicatat jadi lebih mudah diselesaikan.</div>
+            </aside>
+          </div>
+        </section>
+      </main>
+      <footer><span>Made for your next small win <span class="footer-heart">♥</span></span><span>StudyBoard · ITERA</span></footer>
+    </div>
+  </body>
+</html>
