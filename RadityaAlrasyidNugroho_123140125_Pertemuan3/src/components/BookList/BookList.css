@@ -1,0 +1,20 @@
+.book-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  border-top: 1px solid var(--rule-strong);
+  /* Counter untuk nomor urut di setiap BookItem */
+  counter-reset: book;
+}
+
+.book-list__empty {
+  margin: 0;
+  padding: 48px 16px;
+  border-top: 1px solid var(--rule-strong);
+  border-bottom: 1px solid var(--rule);
+  font-family: var(--font-serif);
+  font-size: 1.1rem;
+  font-style: italic;
+  text-align: center;
+  color: var(--ink-faint);
+}

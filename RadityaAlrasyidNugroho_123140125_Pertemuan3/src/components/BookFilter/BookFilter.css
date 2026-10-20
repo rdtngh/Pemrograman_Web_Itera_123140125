@@ -1,0 +1,26 @@
+/* Filter berupa tab teks; tab aktif digarisbawahi */
+.book-filter {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 22px;
+}
+
+.book-filter__button {
+  padding: 4px 0;
+  border: none;
+  border-bottom: 2px solid transparent;
+  background: none;
+  font-size: 0.9rem;
+  color: var(--ink-soft);
+}
+
+.book-filter__button:hover {
+  color: var(--ink);
+}
+
+/* Tombol filter yang sedang aktif */
+.book-filter__button--active {
+  border-bottom-color: var(--accent);
+  font-weight: 600;
+  color: var(--ink);
+}

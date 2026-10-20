@@ -1,0 +1,104 @@
+.home__header {
+  margin-bottom: 32px;
+}
+
+.home__header h1 {
+  margin-top: 6px;
+  font-size: 2.4rem;
+  letter-spacing: -0.015em;
+}
+
+.home__header p:last-child {
+  max-width: 46ch;
+  margin: 6px 0 0;
+  color: var(--ink-soft);
+}
+
+/* Notifikasi singkat setelah tambah/edit/hapus: strip gelap di pojok kiri bawah */
+.home__notification {
+  position: fixed;
+  left: 20px;
+  bottom: 20px;
+  z-index: 20;
+  max-width: calc(100% - 40px);
+  padding: 11px 16px 11px 14px;
+  border-left: 4px solid var(--color-milik);
+  background-color: var(--ink);
+  color: var(--paper-raised);
+  font-size: 0.9rem;
+  animation: notification-in 0.18s ease-out;
+}
+
+.home__notification--danger {
+  border-left-color: var(--danger);
+}
+
+@keyframes notification-in {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* Dua kolom di desktop: form di kiri, daftar di kanan */
+.home__layout {
+  display: grid;
+  grid-template-columns: 290px minmax(0, 1fr);
+  gap: 48px;
+  align-items: start;
+}
+
+.home__form {
+  position: sticky;
+  top: 24px;
+}
+
+.home__list {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.home__toolbar {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.home__count {
+  margin: 8px 0 -10px;
+  font-size: 0.8rem;
+  font-variant-numeric: tabular-nums;
+  color: var(--ink-faint);
+  text-align: right;
+}
+
+.home__no-result {
+  margin: 0;
+  padding: 40px 16px;
+  border-top: 1px solid var(--rule-strong);
+  font-family: var(--font-serif);
+  font-style: italic;
+  text-align: center;
+  color: var(--ink-faint);
+}
+
+/* Layar tablet/HP: satu kolom */
+@media (max-width: 800px) {
+  .home__layout {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+
+  .home__form {
+    position: static;
+  }
+
+  .home__header h1 {
+    font-size: 2rem;
+  }
+}

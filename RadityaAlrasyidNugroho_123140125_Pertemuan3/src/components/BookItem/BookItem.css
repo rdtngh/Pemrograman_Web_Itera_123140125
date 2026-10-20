@@ -1,0 +1,110 @@
+/* Satu baris buku besar: nomor urut | judul & penulis | status | aksi */
+.book-item {
+  display: grid;
+  grid-template-columns: 2.5rem minmax(0, 1fr) 9.5rem auto;
+  align-items: baseline;
+  gap: 16px;
+  padding: 16px 4px;
+  border-bottom: 1px solid var(--rule);
+  counter-increment: book;
+}
+
+/* Nomor urut otomatis dari CSS counter (01, 02, ...) */
+.book-item::before {
+  content: counter(book, decimal-leading-zero);
+  font-family: var(--font-serif);
+  font-size: 0.9rem;
+  font-variant-numeric: tabular-nums;
+  color: var(--ink-faint);
+}
+
+.book-item:hover {
+  background-color: rgba(255, 255, 255, 0.45);
+}
+
+.book-item__info {
+  min-width: 0;
+}
+
+.book-item__title {
+  font-size: 1.15rem;
+  overflow-wrap: anywhere;
+}
+
+.book-item__author {
+  margin: 2px 0 0;
+  font-size: 0.9rem;
+  color: var(--ink-soft);
+  overflow-wrap: anywhere;
+}
+
+/* Status: kotak kecil berwarna + teks. Hijau = Dimiliki, biru = Sedang Dibaca, oranye = Ingin Dibeli */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.badge::before {
+  content: '';
+  width: 9px;
+  height: 9px;
+  background-color: currentColor;
+}
+
+.badge--milik {
+  color: var(--color-milik);
+}
+
+.badge--baca {
+  color: var(--color-baca);
+}
+
+.badge--beli {
+  color: var(--color-beli);
+}
+
+.book-item__actions {
+  display: flex;
+  gap: 14px;
+}
+
+/* Tombol aksi berupa teks bergaris bawah, bukan kotak */
+.book-item__action {
+  padding: 0;
+  border: none;
+  background: none;
+  font-size: 0.85rem;
+  color: var(--ink-soft);
+  text-decoration: underline;
+  text-decoration-color: var(--rule);
+  text-underline-offset: 3px;
+}
+
+.book-item__action:hover {
+  color: var(--ink);
+  text-decoration-color: currentColor;
+}
+
+.book-item__action--danger:hover {
+  color: var(--danger);
+}
+
+/* Layar HP: nomor di kiri, isi bertumpuk di kanan */
+@media (max-width: 600px) {
+  .book-item {
+    grid-template-columns: 2rem minmax(0, 1fr);
+    row-gap: 8px;
+  }
+
+  .book-item::before {
+    grid-row: span 3;
+  }
+
+  .book-item__actions {
+    gap: 20px;
+  }
+}

@@ -1,0 +1,27 @@
+.search-bar {
+  width: 100%;
+}
+
+/* Kolom pencarian bergaya garis isian: hanya garis bawah, teks serif besar */
+.search-bar__input {
+  width: 100%;
+  padding: 8px 2px;
+  border: none;
+  border-bottom: 1px solid var(--ink-faint);
+  border-radius: 0;
+  background: transparent;
+  font-family: var(--font-serif);
+  font-size: 1.15rem;
+  transition: border-color 0.12s;
+}
+
+.search-bar__input::placeholder {
+  font-style: italic;
+  color: var(--ink-faint);
+}
+
+.search-bar__input:focus {
+  outline: none;
+  border-bottom-color: var(--ink);
+  box-shadow: 0 1px 0 0 var(--ink);
+}

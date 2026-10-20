@@ -1,0 +1,165 @@
+.stats {
+  max-width: 760px;
+}
+
+.stats h1 {
+  margin: 6px 0 32px;
+  font-size: 2.4rem;
+  letter-spacing: -0.015em;
+}
+
+/* Angka total besar bergaya judul halaman buku */
+.stats__total {
+  display: flex;
+  align-items: baseline;
+  gap: 14px;
+  padding-bottom: 18px;
+}
+
+.stats__total-value {
+  font-family: var(--font-serif);
+  font-size: 5rem;
+  font-weight: 600;
+  line-height: 0.9;
+  font-variant-numeric: tabular-nums;
+}
+
+.stats__total-label {
+  font-family: var(--font-serif);
+  font-size: 1.2rem;
+  font-style: italic;
+  color: var(--ink-soft);
+}
+
+/* Bar distribusi gabungan; lebar tiap segmen sebanding dengan jumlah bukunya */
+.stats__distribution {
+  display: flex;
+  gap: 2px;
+  height: 14px;
+  margin-bottom: 36px;
+}
+
+.stats__segment {
+  flex-basis: 0;
+}
+
+.stats__segment--milik {
+  background-color: var(--color-milik);
+}
+
+.stats__segment--baca {
+  background-color: var(--color-baca);
+}
+
+.stats__segment--beli {
+  background-color: var(--color-beli);
+}
+
+/* Baris per status: label | jumlah | progress bar | persen */
+.stats__rows {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  border-top: 1px solid var(--rule-strong);
+}
+
+.stats__row {
+  display: grid;
+  grid-template-columns: 9.5rem 3rem minmax(0, 1fr) 3rem;
+  align-items: center;
+  gap: 16px;
+  padding: 16px 0;
+  border-bottom: 1px solid var(--rule);
+}
+
+.stats__label {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 600;
+}
+
+/* Penanda kotak kecil berwarna, sama dengan badge di daftar buku */
+.stats__label::before {
+  content: '';
+  width: 9px;
+  height: 9px;
+  flex-shrink: 0;
+}
+
+.stats__row--milik .stats__label::before,
+.stats__row--milik .stats__progress-fill {
+  background-color: var(--color-milik);
+}
+
+.stats__row--baca .stats__label::before,
+.stats__row--baca .stats__progress-fill {
+  background-color: var(--color-baca);
+}
+
+.stats__row--beli .stats__label::before,
+.stats__row--beli .stats__progress-fill {
+  background-color: var(--color-beli);
+}
+
+.stats__count {
+  font-family: var(--font-serif);
+  font-size: 1.4rem;
+  font-variant-numeric: tabular-nums;
+  text-align: right;
+}
+
+.stats__progress {
+  height: 6px;
+  background-color: var(--rule);
+}
+
+.stats__progress-fill {
+  height: 100%;
+  transition: width 0.4s ease;
+}
+
+.stats__percent {
+  font-size: 0.85rem;
+  font-variant-numeric: tabular-nums;
+  color: var(--ink-soft);
+  text-align: right;
+}
+
+.stats__empty {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
+  padding-top: 20px;
+  border-top: 1px solid var(--rule-strong);
+}
+
+.stats__empty p {
+  margin: 0;
+  font-family: var(--font-serif);
+  font-size: 1.15rem;
+  font-style: italic;
+  color: var(--ink-soft);
+}
+
+@media (max-width: 560px) {
+  .stats h1 {
+    font-size: 2rem;
+  }
+
+  .stats__total-value {
+    font-size: 3.75rem;
+  }
+
+  /* Progress bar turun ke baris kedua di layar HP */
+  .stats__row {
+    grid-template-columns: minmax(0, 1fr) auto 3rem;
+    row-gap: 10px;
+  }
+
+  .stats__progress {
+    grid-column: 1 / -1;
+    grid-row: 2;
+  }
+}
