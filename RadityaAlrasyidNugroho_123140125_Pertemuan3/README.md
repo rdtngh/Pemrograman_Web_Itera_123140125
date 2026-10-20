@@ -137,19 +137,19 @@ RadityaAlrasyidNugroho_123140125_Pertemuan3/
 ## Screenshot
 
 ### Halaman Beranda
-![Halaman Beranda](screenshots/home.png)
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/3db0410a-23d8-46bb-a34d-a952c100f1da" />
 
 ### Validasi Form (Error)
-![Validasi form](screenshots/form-error.png)
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/67774b83-8378-4c54-a98e-421bb113f7b2" />
 
 ### Mode Edit
-![Mode edit](screenshots/edit.png)
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/dc8a5c33-9885-40b0-b98d-215ec51d47a2" />
 
 ### Filter & Pencarian
-![Filter dan pencarian](screenshots/filter-search.png)
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/de324517-d58d-4003-aad3-a2e899b72597" />
 
 ### Halaman Statistik
-![Halaman statistik](screenshots/stats.png)
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/ad412409-509d-4666-a2d3-10edc7844a21" />
 
 ### Hasil Unit Test
-![Hasil npm test](screenshots/test-result.png)
+<img width="1025" height="600" alt="image" src="https://github.com/user-attachments/assets/db49b5f7-a028-4365-a009-c319fe1530bc" />
